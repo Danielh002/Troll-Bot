@@ -10,16 +10,12 @@ client.once("ready", () => {
 
 client.on("messages", (message) => {
     console.log(message);
-    if(message.content.starwith(prefix) || message.content.bot){
-        const args = message.content.slice(prefix.length).split(/ +/);
-        const command = args.shift().toUpperCase();
-        if(command === "PING"){
-            message.channel.send('PONG!');
-        } 
-    }
-    else{
-        return null;
-    }
+    if(!message.content.starwith(prefix) || message.content.bot) return; 
+    const args = message.content.slice(prefix.length).split(/ +/);
+    const command = args.shift().toUpperCase();
+    if(command === "PING"){
+         message.channel.send('PONG!');
+    } 
 })
 
 client.login(process.env.DISCORD_BOT_TOKEN);
