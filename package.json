@@ -1,0 +1,18 @@
+{
+  "name": "troll-bot",
+  "version": "1.0.0",
+  "description": "Troll bot is a dedicated bot to troll",
+  "main": "main.js",
+  "scripts": {
+    "start" : "nodemon main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Danel Hernandez",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
